@@ -19,7 +19,7 @@ class Tmux < Formula
 
   patch :p1 do
     url 'https://gist.githubusercontent.com/waltarix/1399751/raw/e60e879335bf3b91fef4592b194cc524bcb95388/tmux-ambiguous-width-cjk.patch'
-    sha1 'cc138b1893b15c0bd57cf3956c6a3e8120abc7d0'
+    sha256 'b77fa3de2cd43f1fe0c0423576b38e363d387343e8d0ed8a2702e67068d64fdf'
   end
 
   patch :p1 do
