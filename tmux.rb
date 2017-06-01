@@ -1,8 +1,8 @@
 class Tmux < Formula
   desc "Terminal multiplexer"
   homepage "https://tmux.github.io/"
-  head "https://github.com/atton-/tmux", using: :git, branch: '2.4-border-ascii'
-  version '2.4'
+  head "https://github.com/atton-/tmux", using: :git, branch: '2.5-border-ascii'
+  version '2.5'
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
