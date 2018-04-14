@@ -1,8 +1,8 @@
 class Tmux < Formula
   desc "Terminal multiplexer"
   homepage "https://tmux.github.io/"
-  head "https://github.com/atton-/tmux", using: :git, branch: '2.5-border-ascii'
-  version '2.5'
+  head "https://github.com/atton/tmux", using: :git, branch: '2.6-border-ascii'
+  version '2.6'
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
@@ -36,7 +36,7 @@ class Tmux < Formula
     bash_completion.install resource("completion")
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Example configuration has been installed to:
       #{opt_pkgshare}
     EOS
