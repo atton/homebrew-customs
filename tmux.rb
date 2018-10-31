@@ -1,8 +1,9 @@
 class Tmux < Formula
   desc "Terminal multiplexer"
   homepage "https://tmux.github.io/"
-  head "https://github.com/atton/tmux", using: :git, branch: '2.7-border-ascii'
-  version '2.7'
+  head "https://github.com/atton/tmux", using: :git, branch: '2.8-border-ascii'
+  version '2.8'
+
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
@@ -25,7 +26,7 @@ class Tmux < Formula
       --sysconfdir=#{etc}
     ]
 
-    args << "--enable-utf8proc"
+    args << "--enable-utf8proc" if build.with?("utf8proc")
 
     ENV.append "LDFLAGS", "-lresolv"
     system "./configure", *args
@@ -39,7 +40,7 @@ class Tmux < Formula
   def caveats; <<~EOS
     Example configuration has been installed to:
       #{opt_pkgshare}
-    EOS
+  EOS
   end
 
   test do
