@@ -1,7 +1,7 @@
 class Utf8proc < Formula
   desc "Clean C library for processing UTF-8 Unicode data"
   homepage "http://julialang.org/utf8proc/"
-  url 'https://github.com/atton-/utf8proc', using: :git, tag: :ambiguous
+  url 'https://github.com/atton/utf8proc', using: :git, tag: 'ambiguous-2.1'
   version "2.1"
 
   def install
