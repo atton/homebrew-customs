@@ -1,16 +1,15 @@
 class Tmux < Formula
   desc "Terminal multiplexer"
   homepage "https://tmux.github.io/"
-  head "https://github.com/atton/tmux", using: :git, branch: '2.8-border-ascii'
-  version '2.8'
+  head "https://github.com/atton/tmux", using: :git, branch: '2.9a-border-ascii'
+  version '2.9a'
 
-
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
-  depends_on "pkg-config" => :build
+  depends_on "autoconf"
+  depends_on "automake"
+  depends_on "libtool"
+  depends_on "pkg-config"
   depends_on "libevent"
-  depends_on "utf8proc" => :optional
+  depends_on "ncurses"
 
   resource "completion" do
     url "https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/homebrew_1.0.0/completions/tmux"
@@ -25,8 +24,6 @@ class Tmux < Formula
       --prefix=#{prefix}
       --sysconfdir=#{etc}
     ]
-
-    args << "--enable-utf8proc" if build.with?("utf8proc")
 
     ENV.append "LDFLAGS", "-lresolv"
     system "./configure", *args
