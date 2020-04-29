@@ -1,0 +1,35 @@
+name: Verify my formulas
+
+on: [push, pull_request]
+
+jobs:
+  git-scripts:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install formula
+        run: brew install --HEAD git-scripts.rb
+  tmux:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install formula
+        run: brew install --HEAD tmux.rb
+  x64-elf-binutils:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install formula
+        run: brew install x64-elf-binutils.rb
+  x64-elf-gcc:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install formula
+        run: brew install x64-elf-gcc.rb
+  x64-elf-gdb:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install formula
+        run: brew install x64-elf-gdb.rb
