@@ -6,6 +6,6 @@ class MacScripts < Formula
   bottle :unneeded
 
   def install
-    bin.install Dir["*"]
+    bin.install Dir["*"].select{|file|File.executable?(file)}
   end
 end
