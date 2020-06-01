@@ -1,14 +1,8 @@
-name: Install tests for formulas
+name: Brew Install Tests
 
 on: [push, pull_request]
 
 jobs:
-  git-scripts:
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install formula
-        run: brew install --HEAD git-scripts.rb
   mac-scripts:
     runs-on: macos-latest
     steps:
