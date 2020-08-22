@@ -5,7 +5,7 @@
 * [mac-scripts](https://github.com/atton/mac-scripts)
   * My utility scripts
 * peep
-  * peep without 'peep-notify' command
+  * peep without `peep-notify` command
   * Original: [Songmu/peep](https://github.com/Songmu/peep)
 * [tmux](https://github.com/atton/tmux)
   * Forked tmux uses only ASCII characters on split window.
@@ -13,8 +13,8 @@
 
 ## How to Install
 * mac-scripts
-  * `brew install --HEAD atton/customs/mac-scripts`
+  * `$ brew install --HEAD atton/customs/mac-scripts`
 * peep
-  * `brew install atton/customs/peep`
+  * `$ brew install atton/customs/peep`
 * tmux
-  * `brew install --HEAD atton/customs/tmux`
+  * `$ brew install --HEAD atton/customs/tmux`
