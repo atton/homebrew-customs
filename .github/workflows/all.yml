@@ -8,16 +8,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install formula
-        run: brew install --HEAD mac-scripts.rb
+        run: brew install --HEAD ./mac-scripts.rb
   tmux:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install formula
-        run: brew install --HEAD tmux.rb
+        run: brew install --HEAD ./tmux.rb
   peep:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install formula
-        run: brew install peep.rb
+        run: brew install ./peep.rb
